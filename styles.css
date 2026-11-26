@@ -9,8 +9,8 @@
   -moz-osx-font-smoothing: grayscale;
   font-optical-sizing: auto;
   --ink: #172033;
-  --muted: #78859a;
-  --blue: #2861e8;
+  --muted: #526075;
+  --blue: #1d4ed8;
   --line: #e2e8f0;
   --surface: #f7f9fc;
 }
@@ -103,7 +103,7 @@ a {
 
 .site-nav a,
 .footer-nav a {
-  color: #59667b;
+  color: var(--muted);
   font-size: 11px;
 }
 
@@ -145,7 +145,7 @@ h1 {
 
 .hero-copy > p {
   margin-bottom: 15px;
-  color: #69768a;
+  color: var(--muted);
   font-size: 13px;
   line-height: 1.65;
 }
@@ -158,7 +158,7 @@ h1 {
   border: 1px solid #e6ebf2;
   border-radius: 999px;
   background: #fff;
-  color: #556277;
+  color: var(--muted);
   font-size: 10px;
 }
 
@@ -169,7 +169,7 @@ h1 {
   place-items: center;
   border-radius: 50%;
   background: #eaf8f1;
-  color: #22a267;
+  color: #067647;
   font-size: 10px;
   font-weight: 700;
 }
@@ -236,7 +236,7 @@ textarea {
 }
 
 textarea::placeholder {
-  color: #8a96aa;
+  color: #667085;
 }
 
 textarea:focus,
@@ -333,7 +333,7 @@ textarea:focus,
 .file-status {
   min-height: 0;
   margin: 0;
-  color: #57677e;
+  color: var(--muted);
   font-size: 10px;
 }
 
@@ -348,7 +348,7 @@ textarea:focus,
 
 .file-status.is-success,
 .form-message.is-success {
-  color: #087443;
+  color: #067647;
 }
 
 .form-footer {
@@ -471,7 +471,7 @@ textarea:focus,
 
 .step-card > p:last-child {
   margin-bottom: 0;
-  color: #69768a;
+  color: var(--muted);
   font-size: 10px;
   line-height: 1.55;
 }
@@ -517,7 +517,7 @@ textarea:focus,
 
 .privacy-inner p {
   margin: 0;
-  color: #69768a;
+  color: var(--muted);
   font-size: 10px;
   line-height: 1.55;
 }
