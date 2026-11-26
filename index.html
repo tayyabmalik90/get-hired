@@ -38,13 +38,13 @@
           <div class="hero-copy">
             <h1 id="hero-title">Your Resume, Tailored for<br class="desktop-break" /> Your Next Opportunity.</h1>
             <p>
-              See how your resume could be tailored to the role, with an ATS-friendly
-              resume and a personalized cover letter.
+              Preview the steps involved in tailoring a resume to a job description.
+              No documents are made from your upload; only fictional sample previews are shown.
             </p>
             <div class="trust-badge">
               <span class="trust-check" aria-hidden="true">✓</span>
-              Free to use <span aria-hidden="true">•</span> No account required
-              <span aria-hidden="true">•</span> Browser-only preview
+              Interactive demo <span aria-hidden="true">•</span> No account required
+              <span aria-hidden="true">•</span> No files sent
             </div>
           </div>
 
@@ -65,7 +65,7 @@
                   aria-describedby="job-help job-count"
                 ></textarea>
                 <div class="field-meta">
-                  <span id="job-help">Minimum 100 characters for accurate keyword matching</span>
+                  <span id="job-help">Enter at least 100 characters to preview the workflow</span>
                   <span id="job-count" aria-live="polite">0 chars</span>
                 </div>
               </div>
@@ -93,7 +93,7 @@
                     </svg>
                   </span>
                   <strong id="upload-title">Drag and drop your resume here or<br /> browse files</strong>
-                  <span class="upload-hint">Supported formats: PDF and DOCX (max 10 MB)</span>
+                  <span class="upload-hint">Supported formats: PDF and DOCX (max 4 MB)</span>
                   <span class="browse-button">Browse files</span>
                 </label>
                 <p class="file-status" id="file-status" aria-live="polite"></p>
@@ -104,25 +104,330 @@
                 <svg viewBox="0 0 16 16" aria-hidden="true">
                   <path d="M4.5 6.5V4.75a3.5 3.5 0 0 1 7 0V6.5M3.5 6.5h9v7h-9z" />
                 </svg>
-                Files stay in your browser in this preview. No upload or processing yet.
+                Demo only: your resume and job description stay in this browser.
               </p>
               <button class="primary-button" type="submit">
                 <svg viewBox="0 0 20 20" aria-hidden="true">
                   <path d="m10 2 1.15 4.85L16 8l-4.85 1.15L10 14l-1.15-4.85L4 8l4.85-1.15L10 2Z" />
                   <path d="m15.5 12 .65 2.35L18.5 15l-2.35.65L15.5 18l-.65-2.35L12.5 15l2.35-.65L15.5 12Z" />
                 </svg>
-                Optimize My Resume
+                Preview Demo
               </button>
             </div>
             <p class="form-message" id="form-message" role="status"></p>
           </form>
+
+          <section
+            class="optimization-view"
+            id="optimization-view"
+            aria-labelledby="progress-title"
+            hidden
+          >
+            <header class="progress-heading">
+              <div class="progress-pill" id="progress-pill">
+                <span class="progress-sparkle" aria-hidden="true">✦</span>
+                <span id="progress-mode">Demo Mode · Simulated Progress</span>
+              </div>
+              <h1 id="progress-title">Previewing the<br />Optimization Process</h1>
+              <p>This is a visual demo only. Your uploaded file is not used to create documents.</p>
+            </header>
+
+            <div class="progress-card">
+              <div class="progress-meta">
+                <div class="progress-file" title="Uploaded resume">
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M4.5 2.5h4l3 3v8h-7zM8.5 2.5v3h3" />
+                  </svg>
+                  <span id="progress-filename">resume.pdf</span>
+                </div>
+                <div class="progress-role">
+                  <span aria-hidden="true">▣</span>
+                  <span id="progress-role-name">Target role</span>
+                </div>
+                <span class="progress-step-count" id="progress-step-count">Step 1 of 6</span>
+              </div>
+
+              <div class="progress-current">
+                <strong id="progress-current-text">Reading your resume</strong>
+                <span id="progress-percent">0%</span>
+              </div>
+              <div
+                class="progress-track"
+                id="progress-track"
+                role="progressbar"
+                aria-label="Resume optimization progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+              >
+                <span id="progress-fill"></span>
+              </div>
+
+              <ol class="progress-list" id="progress-list">
+                <li class="progress-step" data-progress-step="0">
+                  <span class="progress-status-icon" aria-hidden="true"></span>
+                  <div class="progress-step-copy">
+                    <h2>Reading your resume</h2>
+                    <p>Demo: previewing the resume-reading stage. Your file stays in this browser.</p>
+                  </div>
+                  <span class="progress-status">Queued</span>
+                </li>
+                <li class="progress-step" data-progress-step="1">
+                  <span class="progress-status-icon" aria-hidden="true"></span>
+                  <div class="progress-step-copy">
+                    <h2>Analyzing the job description</h2>
+                    <p>Demo: previewing how the role requirements would be reviewed.</p>
+                  </div>
+                  <span class="progress-status">Queued</span>
+                </li>
+                <li class="progress-step" data-progress-step="2">
+                  <span class="progress-status-icon" aria-hidden="true"></span>
+                  <div class="progress-step-copy">
+                    <h2>Matching skills and keywords</h2>
+                    <p>Demo: previewing how matching skills would be identified.</p>
+                  </div>
+                  <span class="progress-status">Queued</span>
+                </li>
+                <li class="progress-step" data-progress-step="3">
+                  <span class="progress-status-icon" aria-hidden="true"></span>
+                  <div class="progress-step-copy">
+                    <h2>Optimizing your resume</h2>
+                    <p>Demo: previewing how resume edits would be prepared.</p>
+                  </div>
+                  <span class="progress-status">Queued</span>
+                </li>
+                <li class="progress-step" data-progress-step="4">
+                  <span class="progress-status-icon" aria-hidden="true"></span>
+                  <div class="progress-step-copy">
+                    <h2>Writing your personalized cover letter</h2>
+                    <p>Demo: previewing how a personalized cover letter would be drafted.</p>
+                  </div>
+                  <span class="progress-status">Queued</span>
+                </li>
+                <li class="progress-step" data-progress-step="5">
+                  <span class="progress-status-icon" aria-hidden="true"></span>
+                  <div class="progress-step-copy">
+                    <h2>Preparing your downloadable documents</h2>
+                    <p>Demo: previewing how downloadable documents would be prepared.</p>
+                  </div>
+                  <span class="progress-status">Queued</span>
+                </li>
+              </ol>
+
+              <div class="progress-footer" id="progress-footer">
+                <p>
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M4.5 6.5V4.75a3.5 3.5 0 0 1 7 0V6.5M3.5 6.5h9v7h-9z" />
+                  </svg>
+                  Demo only. Your file contents are not uploaded, saved, or processed.
+                </p>
+                <button class="secondary-button" id="cancel-optimization" type="button">
+                  Cancel demo
+                </button>
+              </div>
+
+              <div class="progress-outcome" id="progress-outcome" hidden>
+                <div class="outcome-success" id="optimization-success" hidden>
+                  <strong id="demo-outcome-title">Demo paused.</strong>
+                  <p id="demo-outcome-message">
+                    No files were processed or sent. You can return to your application or run the demo again.
+                  </p>
+                  <div class="outcome-actions">
+                    <button class="secondary-button" id="back-to-form" type="button">Back to your application</button>
+                    <button class="secondary-button" id="start-another" type="button">Run demo again</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="results-view" id="results-view" aria-labelledby="results-title" hidden>
+        <div class="results-container">
+          <div class="results-banner">
+            <span class="results-check" aria-hidden="true">✓</span>
+            <div class="results-banner-copy">
+              <h1 id="results-title">Your sample documents are ready!</h1>
+              <p>Demo preview only — nothing was generated from your uploaded resume.</p>
+            </div>
+            <button class="secondary-button" id="optimize-another" type="button">
+              Preview Another Resume
+            </button>
+          </div>
+
+          <div class="document-cards">
+            <article class="document-card">
+              <div class="document-card-heading">
+                <span class="document-icon" aria-hidden="true">▤</span>
+                <div class="document-title">
+                  <h2>Sample Optimized Resume</h2>
+                  <p>Alex_Morgan_Demo_Resume.pdf</p>
+                </div>
+                <span class="document-format">DEMO PDF</span>
+              </div>
+              <p class="document-description">
+                Fictional sample showing a clean, single-column resume layout.
+              </p>
+              <div class="document-meta">
+                <span>Sample content</span>
+                <span>1-page example</span>
+              </div>
+              <div class="document-actions">
+                <button class="download-button" type="button" data-download="resume">
+                  Download Sample Resume
+                </button>
+                <button class="preview-button" type="button" data-preview="resume">
+                  Preview
+                </button>
+              </div>
+            </article>
+
+            <article class="document-card">
+              <div class="document-card-heading">
+                <span class="document-icon letter-icon" aria-hidden="true">▧</span>
+                <div class="document-title">
+                  <h2>Sample Cover Letter</h2>
+                  <p>Alex_Morgan_Demo_Cover_Letter.pdf</p>
+                </div>
+                <span class="document-format">DEMO PDF</span>
+              </div>
+              <p class="document-description">
+                Fictional one-page example with a personalized letter structure.
+              </p>
+              <div class="document-meta">
+                <span>Sample content</span>
+                <span>1-page example</span>
+              </div>
+              <div class="document-actions">
+                <button class="download-button" type="button" data-download="letter">
+                  Download Sample Letter
+                </button>
+                <button class="preview-button" type="button" data-preview="letter">
+                  Preview
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <section class="document-preview" aria-label="Sample document preview">
+            <div class="preview-toolbar">
+              <div class="preview-tabs" role="tablist" aria-label="Choose sample document">
+                <button
+                  class="preview-tab is-selected"
+                  id="resume-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="resume-preview"
+                >
+                  Sample Resume
+                </button>
+                <button
+                  class="preview-tab"
+                  id="letter-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="letter-preview"
+                  tabindex="-1"
+                >
+                  Sample Cover Letter
+                </button>
+              </div>
+              <span class="preview-format">DEMO SAMPLE · FICTIONAL CONTENT</span>
+            </div>
+
+            <div class="preview-stage">
+              <article
+                class="preview-page resume-preview"
+                id="resume-preview"
+                role="tabpanel"
+                aria-labelledby="resume-tab"
+              >
+                <header class="sample-resume-header">
+                  <h2>Alex Morgan</h2>
+                  <p>Frontend Software Engineer</p>
+                  <span>San Francisco, CA · alex.morgan@example.test · linkedin.com/in/alexmorgan</span>
+                </header>
+                <section class="resume-section">
+                  <h3>Professional Summary</h3>
+                  <p>
+                    Frontend engineer focused on accessible React experiences, reliable design systems,
+                    and measurable improvements to web performance.
+                  </p>
+                </section>
+                <section class="resume-section">
+                  <h3>Work Experience</h3>
+                  <div class="resume-role">
+                    <strong>Frontend Engineer — Northstar Labs</strong>
+                    <span>2022 – Present</span>
+                  </div>
+                  <ul>
+                    <li>Built reusable React and TypeScript components for customer-facing workflows.</li>
+                    <li>Improved accessibility and Core Web Vitals across key product pages.</li>
+                    <li>Partnered with design and product teams to ship reliable UI updates.</li>
+                  </ul>
+                  <div class="resume-role">
+                    <strong>Software Engineer — Brightline Systems</strong>
+                    <span>2020 – 2022</span>
+                  </div>
+                  <ul>
+                    <li>Delivered responsive dashboards and maintained shared component libraries.</li>
+                    <li>Added automated tests and documented frontend development patterns.</li>
+                  </ul>
+                </section>
+                <section class="resume-section">
+                  <h3>Skills</h3>
+                  <p>React · TypeScript · JavaScript · Accessibility · CSS · Testing · Design Systems</p>
+                </section>
+                <section class="resume-section">
+                  <h3>Education</h3>
+                  <p>B.S. Computer Science — Example State University</p>
+                </section>
+                <span class="sample-watermark">DEMO SAMPLE · NOT YOUR RESUME</span>
+              </article>
+
+              <article
+                class="preview-page letter-preview"
+                id="letter-preview"
+                role="tabpanel"
+                aria-labelledby="letter-tab"
+                hidden
+              >
+                <span class="letter-demo-label">DEMO SAMPLE · FICTIONAL CONTENT</span>
+                <h2>Alex Morgan</h2>
+                <p class="letter-contact">San Francisco, CA · alex.morgan@example.test</p>
+                <p>Dear Hiring Team,</p>
+                <p>
+                  I’m excited to apply for the Senior Frontend Engineer role. My experience building
+                  accessible React applications and reusable TypeScript components aligns with the
+                  work your team is doing.
+                </p>
+                <p>
+                  At Northstar Labs, I partnered with design and product teams to improve customer
+                  workflows and strengthen frontend performance. I enjoy turning complex requirements
+                  into clear, reliable experiences.
+                </p>
+                <p>
+                  I’d welcome the opportunity to bring that focus to your team. Thank you for your
+                  consideration.
+                </p>
+                <p class="letter-signoff">Sincerely,<br />Alex Morgan</p>
+              </article>
+            </div>
+          </section>
+
+          <p class="results-disclaimer">
+            These example documents are fictional. Your uploaded file was not read, changed, or sent anywhere.
+          </p>
         </div>
       </section>
 
       <section class="how-section" id="how-it-works" aria-labelledby="how-title">
         <div class="content-width">
           <h2 id="how-title">How It Works</h2>
-          <p class="section-intro">Three focused steps from existing resume to tailored application.</p>
+          <p class="section-intro">Preview the workflow without sending your file or using it to create documents.</p>
           <div class="steps-grid">
             <article class="step-card">
               <p class="step-number">01 — Upload Your Resume</p>
@@ -132,12 +437,12 @@
             <article class="step-card">
               <p class="step-number">02 — Add Your Job Description</p>
               <h3>Target the Role</h3>
-              <p>Paste the job description of the position you’re targeting so we can surface matching skills and key terminology.</p>
+              <p>Paste a job description to display the target role throughout the simulated process.</p>
             </article>
             <article class="step-card">
-              <p class="step-number">03 — Get Your Optimized Documents</p>
-              <h3>Preview &amp; Download</h3>
-              <p>Download your tailored, ATS-friendly resume and personalized cover letter formatted as clean PDFs.</p>
+              <p class="step-number">03 — Preview the Process</p>
+              <h3>See the Workflow</h3>
+              <p>Preview the final preparation stage and optionally download fictional sample PDFs.</p>
             </article>
           </div>
         </div>
@@ -152,10 +457,11 @@
             </svg>
           </span>
           <div>
-            <h2 id="privacy-title">Privacy &amp; Document Security</h2>
+            <h2 id="privacy-title">Demo Privacy</h2>
             <p>
-              No account is needed to preview this page. Your selected resume stays in
-              your browser; upload and AI processing are not connected yet.
+              This demo runs in your browser only. Your resume and job description are
+              not uploaded or sent to an AI service. Sample PDFs are fictional and are not
+              created from your upload.
             </p>
           </div>
         </div>
@@ -165,7 +471,7 @@
     <footer class="site-footer">
       <div class="footer-brand">
         <strong>ResumePolish</strong>
-        <span>AI-powered resume tailoring and cover letter generation.</span>
+        <span>Resume tailoring workflow demo.</span>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#how-it-works">How It Works</a>
